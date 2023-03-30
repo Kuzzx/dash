@@ -17,6 +17,7 @@ dropdown_options = inspector.get_table_names()
 
 load_figure_template('DARKLY')
 app = dash.Dash(external_stylesheets=[dbc.themes.DARKLY])
+server = app.server
 
 dropdown = dcc.Dropdown(
     options=sorted(dropdown_options), 
