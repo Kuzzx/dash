@@ -122,7 +122,7 @@ def generate_table(dropdown_value):
 
 def generate_market_table():
 
-    db_path = "C:\\Users\\Admin\\Dropbox\\TCs\\data\\binance_data.db"
+    db_path = "binance_data.db"
     market_engine = create_engine(f"sqlite:///{db_path}")
 
     btc_close = calc_rsi(df_from_sql(engine=market_engine, table_name='BTCPERP', limit=1000), period=14, column='Volume')
